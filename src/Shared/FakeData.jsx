@@ -1,4 +1,5 @@
 import {faker} from '@faker-js/faker';
+
 function createRandomeCarList(){
     return {
         name:faker.vehicle.vehicle(),
