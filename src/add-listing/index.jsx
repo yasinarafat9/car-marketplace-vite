@@ -4,6 +4,11 @@ import carDetails from '../Shared/carDetails.json'
 import InputField from './components/InputField'
 import DropdownField from '@/add-listing/components/DropdownField'
 import TextAreaField from './components/TextAreaField'
+import { Separator } from '@radix-ui/react-select'
+import features from '../Shared/features.json'
+import { Checkbox } from "@/components/ui/checkbox"
+import { Button } from '@/components/ui/button'
+
 const AddListing = () => {
     return (
         <div>
@@ -28,11 +33,25 @@ const AddListing = () => {
                             ))}
                         </div>
                     </div>
+
+                    <hr className='my-6' />
                     {/* Feature List */}
                     <div>
+                        <h2 className='font-medium text-xl my-6'>Features</h2>
 
+                        <div className='grid grid-cols-2 md:grid-cols-3'>
+                            {features.features.map((item, index) => (
+                                <div key={index} className='flex gap-2 items-center'>
+                                    <Checkbox className="border-gray-500"/>  <h2>{item.label}</h2>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     {/* Car Images */}
+
+                    <div className='mt-10 flex justify-end'>
+                        <Button>Submit</Button>
+                    </div>
                 </form>
             </div>
         </div>
