@@ -14,10 +14,8 @@ const Home = () => {
             <Header />
             <Hero />
             <Category />
-            {/* 
-           <SignInButton mode='modal' forceRedirectUrl='/'>
-            <Button >Sign In</Button>
-           </SignInButton> */}
+           
+         
 
             {/* Most Searched Car */}
             <MostSearchedCar />
